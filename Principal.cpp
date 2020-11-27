@@ -1,5 +1,13 @@
 #include "Conversor.hpp"
 
+
+
+
+/*Para determinar a que espacio de color se va a cambiar al mover un trackbar*/
+void eventoTrackEspacios(int v, void *pP){
+    cout <<"Valor trackbar: " << v << endl;
+}
+
 int main(int argc, char *argv[]){
     
     VideoCapture video(0);
