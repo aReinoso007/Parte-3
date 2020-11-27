@@ -1,9 +1,9 @@
 #include "Conversor.hpp"
 
-Conversion::Conversion(){
+Conversor::Conversor(){
 
 }
 
-void Conversion::hsv(Mat src, Mat dest, Mat estructura, int morfo){
+void Conversor::hsv(Mat src, Mat dest, Mat estructura, int morfo){
 
 }

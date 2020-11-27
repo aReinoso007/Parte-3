@@ -20,10 +20,11 @@ using namespace std;
 using namespace cv;
 
 
-class Conversion{
+class Conversor{
 
     public:
-        Conversion();
+        Conversor();
         void hsv(Mat, Mat, Mat, int);
+        void toGray(Mat, Mat);
 
 };
