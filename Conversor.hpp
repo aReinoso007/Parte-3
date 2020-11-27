@@ -24,7 +24,33 @@ class Conversor{
 
     public:
         Conversor();
-        void hsv(Mat, Mat, Mat, int);
+        /*
+            H - Hue
+            S - Saturacion (pureza / sombras de color)
+            V - Valor (intensidad)
+         */
+        void hsv(Mat, Mat);
+
         void toGray(Mat, Mat);
+        /*
+            L - lightness (intensity)
+            a - color component ranging from Green to magenta
+            b - color component ranging from Blue to Yellow
+
+            L -> es independiente de informacion de color y solo guarda la intensidad o brillo
+            cvtColor(Mat input, Mat output, COLOR_BGR2LAB)
+         */
+        void toLAb();
+
+        /* 
+            Y - Luminesencia o Luma, componente obtenido de RGB despues de hacer una correccion gamma
+            Cr : R - Y (distancia componente rojo de Luma)
+            Cb - B - Y ( distancia componente azul de Luma)
+
+            cv::cvtColor(bright, brightYCB, cv::COLOR_BGR2YCrCb);
+	        cv::cvtColor(dark, darkYCB, cv::COLOR_BGR2YCrCb);
+        */
+       void toYcrCb();
+
 
 };

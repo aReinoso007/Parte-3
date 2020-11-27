@@ -4,6 +4,6 @@ Conversor::Conversor(){
 
 }
 
-void Conversor::hsv(Mat src, Mat dest, Mat estructura, int morfo){
+void Conversor::hsv(cv::Mat src, cv::Mat dest){
 
 }
