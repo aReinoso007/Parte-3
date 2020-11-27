@@ -22,4 +22,8 @@ using namespace cv;
 
 class Conversion{
 
+    public:
+        Conversion();
+        void hsv(Mat, Mat, Mat, int);
+
 };
