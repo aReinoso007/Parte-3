@@ -29,15 +29,19 @@ int main(int argc, char *argv[]){
                 break;
             if(iSliderValue1==1){
                 conversor.hsv(frame, resultado);
+                imwrite("imagenes/hsv.png", resultado);
             }
             else if(iSliderValue1==2) {
-                conversor.toGray(frame, resultado);
+                cvtColor(frame, resultado, COLOR_BGR2GRAY);
+                imwrite("imagenes/gray.png", resultado);
             }
             else if(iSliderValue1==3) {
                 conversor.toLAb(frame, resultado);
+                imwrite("imagenes/lab.png", resultado);
             }
             else if(iSliderValue1==4){ 
                 conversor.toYcrCb(frame, resultado);
+                imwrite("imagenes/ycrcb.png", resultado);
             }
             else if(iSliderValue1==0){
                 resultado = frame;

@@ -50,7 +50,7 @@ class Conversor{
             cv::cvtColor(bright, brightYCB, cv::COLOR_BGR2YCrCb);
 	        cv::cvtColor(dark, darkYCB, cv::COLOR_BGR2YCrCb);
         */
-       cv::Mat toYcrCb(Mat, Mat);
+        cv::Mat toYcrCb(Mat, Mat);
 
 
 };
