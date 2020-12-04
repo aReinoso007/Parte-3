@@ -4,19 +4,22 @@ Conversor::Conversor(){
 
 }
 
-void Conversor::hsv(cv::Mat src, cv::Mat dest){
+cv::Mat Conversor::hsv(cv::Mat src, cv::Mat dest){
     cvtColor(src, dest, COLOR_BGR2HSV);
-    
+    return dest;
 }
 
-void Conversor::toGray(Mat src, Mat dest){
-
+cv::Mat Conversor::toGray(Mat src, Mat dest){
+    cvtColor(src, dest, COLOR_BGR2GRAY);
+    return dest;
 }
 
-void Conversor::toLAb(){
-
+cv::Mat Conversor::toLAb(Mat src, Mat dest){
+    cvtColor(src, dest, COLOR_BGR2Lab);
+    return dest;
 }
 
-void Conversor::toYcrCb(){
-    
+cv::Mat Conversor::toYcrCb(Mat src, Mat dest){
+    cvtColor(src, dest, COLOR_BGR2YCrCb);
+    return dest;
 }

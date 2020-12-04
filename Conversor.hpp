@@ -29,9 +29,9 @@ class Conversor{
             S - Saturacion (pureza / sombras de color)
             V - Valor (intensidad)
          */
-        void hsv(Mat, Mat);
+        cv::Mat hsv(Mat, Mat);
 
-        void toGray(Mat, Mat);
+        cv::Mat toGray(Mat, Mat);
         /*
             L - lightness (intensity)
             a - color component ranging from Green to magenta
@@ -40,7 +40,7 @@ class Conversor{
             L -> es independiente de informacion de color y solo guarda la intensidad o brillo
             cvtColor(Mat input, Mat output, COLOR_BGR2LAB)
          */
-        void toLAb();
+        cv::Mat toLAb(Mat, Mat);
 
         /* 
             Y - Luminesencia o Luma, componente obtenido de RGB despues de hacer una correccion gamma
@@ -50,7 +50,7 @@ class Conversor{
             cv::cvtColor(bright, brightYCB, cv::COLOR_BGR2YCrCb);
 	        cv::cvtColor(dark, darkYCB, cv::COLOR_BGR2YCrCb);
         */
-       void toYcrCb();
+       cv::Mat toYcrCb(Mat, Mat);
 
 
 };
