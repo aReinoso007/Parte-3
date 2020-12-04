@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
         namedWindow("Video",WINDOW_AUTOSIZE);
         while(3==3){
             video >> frame;
-            
+            resultado = Mat(Size(frame.cols, frame.rows), CV_8UC3, Scalar(255, 255, 255));
             if(frame.rows<=0 || frame.cols<=0)
                 break;
             if(iSliderValue1==1){
