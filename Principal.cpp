@@ -12,7 +12,7 @@ int main(int argc, char *argv[]){
     
     VideoCapture video(0);
     Mat resultado;
-    
+    Conversor conversor;
 
     namedWindow("video", WINDOW_AUTOSIZE);
     namedWindow("Efecto", WINDOW_AUTOSIZE);
@@ -27,27 +27,18 @@ int main(int argc, char *argv[]){
             
             if(frame.rows<=0 || frame.cols<=0)
                 break;
-            /*cvtColor(frame, resultado, COLOR_BGR2HSV);*/
-            //1 para HSV
-
             if(iSliderValue1 == 1){
-                cout <<"HSV" << endl;
-                cvtColor(frame, resultado, COLOR_BGR2HSV);
+                conversor.hsv(frame, resultado);
             }
-                //2 para gray
             else if(iSliderValue1 == 2) {
-                cout <<"Gray" << endl; 
                 cvtColor(frame, resultado, COLOR_BGR2GRAY);
-            //3 para LAb
+                //conversor.toGray(frame, resultado);
             }
             else if(iSliderValue1 == 3) {
-                cout <<"LAB" << endl; 
-                cvtColor(frame, resultado, COLOR_BGR2Lab);
+                conversor.toLAb(frame, resultado);
             }
-            //4 para yCrCb
             else if(iSliderValue1 == 4){ 
-                cout <<"toYcrCb" << endl; 
-                cvtColor(frame, resultado, COLOR_BGR2YCrCb);
+                conversor.toYcrCb(frame, resultado);
             }
             else if(iSliderValue1==0){
                 resultado = frame;
