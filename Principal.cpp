@@ -27,17 +27,16 @@ int main(int argc, char *argv[]){
             
             if(frame.rows<=0 || frame.cols<=0)
                 break;
-            if(iSliderValue1 == 1){
+            if(iSliderValue1==1){
                 conversor.hsv(frame, resultado);
             }
-            else if(iSliderValue1 == 2) {
-                cvtColor(frame, resultado, COLOR_BGR2GRAY);
-                //conversor.toGray(frame, resultado);
+            else if(iSliderValue1==2) {
+                conversor.toGray(frame, resultado);
             }
-            else if(iSliderValue1 == 3) {
+            else if(iSliderValue1==3) {
                 conversor.toLAb(frame, resultado);
             }
-            else if(iSliderValue1 == 4){ 
+            else if(iSliderValue1==4){ 
                 conversor.toYcrCb(frame, resultado);
             }
             else if(iSliderValue1==0){

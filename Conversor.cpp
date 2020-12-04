@@ -10,7 +10,7 @@ cv::Mat Conversor::hsv(cv::Mat src, cv::Mat dest){
 }
 
 cv::Mat Conversor::toGray(cv::Mat src, cv::Mat dest){
-    cvtColor(src, dest, COLOR_BGR2GRAY);
+    cvtColor(src, dest, cv::COLOR_BGR2GRAY);
     return dest;
 }
 
